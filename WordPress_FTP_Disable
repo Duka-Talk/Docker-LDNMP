@@ -1,0 +1,3 @@
+跳过FTP更新主题插件的限制
+
+echo "define('FS_METHOD', 'direct');" >> /home/web/html/wp-config.php

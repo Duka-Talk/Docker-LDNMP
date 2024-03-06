@@ -1,10 +1,15 @@
 # LDNMP 一套完整的网站部署方案
 
 L- Linux 主流的有Ubuntu、Debian、CentOS
+
 D- Docker, 使用容器技术部署
+
 N- Nginz 流行的网站代理和反代理软件
+
 M- MySQL 数据酷
+
 P- Php  包含最新版本和Php7.4
+
 同时包含 Redis 作为缓存数据酷
 
 ### 整体项目目录结构：

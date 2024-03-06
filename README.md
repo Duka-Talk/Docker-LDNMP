@@ -1,5 +1,7 @@
 # LDNMP 一套完整的网站部署方案
 
+感谢 https://github.com/kejilion/docker/tree/main KEJILION的Yutube分享，大大提高了网站的运行效率，摆脱宝塔的限制，在AWS免费VPS中，宝塔基本上就把内存耗尽了。因此必须采用下述部署方案。
+
 L- Linux 主流的有Ubuntu、Debian、CentOS
 
 D- Docker, 使用容器技术部署

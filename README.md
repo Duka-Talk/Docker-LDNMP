@@ -115,11 +115,15 @@ docker exec php apt update && docker exec php apt install -y libmariadb-dev-comp
 
 docker exec php docker-php-ext-install mysqli
 
+docker exec php pecl install redis && docker exec php sh -c 'echo "extension=redis.so" > /usr/local/etc/php/conf.d/docker-php-ext-redis.ini'
+
 #### php7.4安装PHP扩展，调整上传文件大小限制，内存限制
 
 docker exec php74 apt update && docker exec php74 apt install -y libmariadb-dev-compat libmariadb-dev libzip-dev libmagickwand-dev imagemagick
 
 docker exec php74 docker-php-ext-install mysqli
+
+docker exec php74 pecl install imagick && docker exec php74 sh -c 'echo "extension=imagick.so" > /usr/local/etc/php/conf.d/imagick.ini'
 
 #### 重启php 
 
@@ -171,4 +175,8 @@ DROP DATABASE web3;
 
 REVOKE ALL PRIVILEGES ON web3.* FROM 'web_admin'@'%';
 
+#### WP 安装完成之后，需要修稿WP的配置
 
+echo "define('FS_METHOD', 'direct'); define('WP_REDIS_HOST', 'redis'); define('WP_REDIS_PORT', '6379');" >> /home/web/html/web1/wordpress/wp-config.php
+
+也可以用VIM编辑，手动修改。

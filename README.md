@@ -6,9 +6,9 @@ L- Linux 主流的有Ubuntu、Debian、CentOS
 
 D- Docker, 使用容器技术部署
 
-N- Nginz 流行的网站代理和反代理软件
+N- Nginx 流行的网站代理和反代理软件
 
-M- MySQL 数据酷
+M- MySQL 数据库
 
 P- Php  包含最新版本和Php7.4
 
